@@ -14,12 +14,13 @@ import com.demotour.qa.base.TestBase;
 public class TestUtil extends TestBase{
 	
 	
-	public static String Test_data_sheet_path= "C:\\Users\\91973\\eclipse-workspace\\Demotour\\src\\main\\java\\com\\demotour\\qa\\TestData\\ExcelDataDemoTour.xlsx";
+	
+	public static String Test_data_sheet_path= "C:\\Users\\91973\\git\\demotour\\Demotour\\src\\main\\java\\com\\demotour\\qa\\testData\\ExcelDemo.xlsx";
  static Workbook book;
  static Sheet sheet;
 
 
-public static Object[][] getTestData(String sheetName){
+public static Object[][] getTestData(){
 	FileInputStream file= null;
 	try {
 		file=new FileInputStream(Test_data_sheet_path);
@@ -34,7 +35,7 @@ public static Object[][] getTestData(String sheetName){
 		e.printStackTrace();
 	}
 	
-	sheet=book.getSheet(sheetName);
+	sheet=book.getSheetAt(0);
 	
 	Object[][] data= new Object[sheet.getLastRowNum()][sheet.getRow(0).getLastCellNum()];
 	System.out.println(sheet.getLastRowNum());

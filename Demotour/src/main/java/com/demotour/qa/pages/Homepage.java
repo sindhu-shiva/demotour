@@ -12,15 +12,6 @@ public class Homepage extends TestBase{
 	@FindBy(xpath="//a[text()='REGISTER']")
 	WebElement RegisterB;
 	
-	@FindBy(xpath="//a[text()='SUPPORT']")
-	WebElement support;
-	
-	@FindBy(xpath="//a[text()='CONTACT']")
-	WebElement contact;
-	
-	@FindBy(xpath="//a[text()='SIGN-ON']")
-	WebElement logout;
-	
 	@FindBy(name="firstName")
 	WebElement firstname;
 	
@@ -88,6 +79,11 @@ public class Homepage extends TestBase{
 		
 		return new RegistersPage();
 	
+	}
+	
+	public String Homepagetitle()
+	{
+		return driver.getTitle();
 	}
     
 }

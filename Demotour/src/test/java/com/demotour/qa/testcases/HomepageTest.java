@@ -1,24 +1,28 @@
 package com.demotour.qa.testcases;
 
+import static org.testng.Assert.assertEquals;
+
+import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import com.demotour.qa.base.TestBase;
 import com.demotour.qa.pages.Homepage;
 import com.demotour.qa.pages.LoginPage;
 import com.demotour.qa.pages.RegistersPage;
+import com.demotour.qa.util.CustomListener;
 import com.demotour.qa.util.TestUtil;
 
+@Listeners(CustomListener.class)
 public class HomepageTest extends TestBase{
 	
 	LoginPage lp;
 	Homepage hp;
-	
 	RegistersPage rp; 
 	
-	String sheetName= "sheet1";
 	
 	 HomepageTest()
 	{
@@ -26,7 +30,7 @@ public class HomepageTest extends TestBase{
 	}
 	
 	@BeforeMethod
-	public void setup()
+	public void setup() throws InterruptedException
 	{
 		initialization();
 		//testUtil= new TestUtil();
@@ -37,21 +41,34 @@ public class HomepageTest extends TestBase{
 		
 	}
 	
-	@DataProvider
+	/*@DataProvider
 	
 	public Object[][] fetchData()
 	{
 		
-		Object data[][] =TestUtil.getTestData(sheetName);
+		Object data[][] =TestUtil.getTestData();
 				return data;
-	}
+	}*/
 	
-	@Test(dataProvider= "fetchData")
-	public void checkValues(String fn1, String ln1, String phno1, String em1, String add1, String cty1, String s1, String postc1, String uname1, String pwd1, String Cpwd1)
+	@Test
+	
+	public void homepagetitletest()
 	{
-		hp.addingnewuser ( fn1,  ln1,  phno1,  em1,  add1,  cty1,  s1,  postc1,  uname1,  pwd1,  Cpwd1);
+		Assert.assertEquals(hp.Homepagetitle(), "Login: Mercury Tours");
+	}
+	@Test
+	public void checkValuespositiveTest()
+	{
+		//hp.addingnewuser( fn1,  ln1,  phno1,  em1,  add1,  cty1,  s1,  postc1,  uname1,  pwd1,  Cpwd1);
+		hp.addingnewuser("nian", "ks", "1234567", "a@b.com", "a", "c", "v", "123", "sinshi", "ram", "ram");
 	}
 	
+	@Test
+	public void checkValuesNegTest()
+	{
+		//hp.addingnewuser( fn1,  ln1,  phno1,  em1,  add1,  cty1,  s1,  postc1,  uname1,  pwd1,  Cpwd1);
+		hp.addingnewuser("nian", "ks", "1234567", "a@b.com", "a", "c", "v", "123", "sinshii", "ram","");
+	}
 
 	@AfterMethod
 	public void teardown()

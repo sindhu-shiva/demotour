@@ -1,63 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="0" skipped="1">
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-01-28T11:55:01 IST" name="Default suite" finished-at="2022-01-28T11:55:02 IST" duration-ms="494">
+  <suite started-at="2022-02-09T13:11:36 IST" name="Default suite" finished-at="2022-02-09T13:11:59 IST" duration-ms="23164">
     <groups>
+      <group name="unsuccessful login">
+        <method signature="LoginPageTest.nologintest()[pri:0, instance:com.demotour.qa.testcases.LoginPageTest@4c371370]" name="nologintest" class="com.demotour.qa.testcases.LoginPageTest"/>
+      </group> <!-- unsuccessful login -->
     </groups>
-    <test started-at="2022-01-28T11:55:01 IST" name="Default test" finished-at="2022-01-28T11:55:02 IST" duration-ms="494">
-      <class name="com.demotour.qa.testcases.HomepageTest">
-        <test-method signature="checkValues(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.demotour.qa.testcases.HomepageTest@34a3d150]" started-at="2022-01-28T11:55:02 IST" name="checkValues" data-provider="fetchData" finished-at="2022-01-28T11:55:02 IST" duration-ms="0" status="SKIP">
-          <exception class="java.lang.RuntimeException">
-            <message>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "Object.toString()" because the return value of "org.apache.poi.ss.usermodel.Row.getCell(int)" is null]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.RuntimeException: java.lang.NullPointerException: Cannot invoke "Object.toString()" because the return value of "org.apache.poi.ss.usermodel.Row.getCell(int)" is null
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:53)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:153)
-at org.testng.internal.Parameters.handleParameters(Parameters.java:767)
-at org.testng.internal.Parameters.handleParameters(Parameters.java:704)
-at org.testng.internal.invokers.ParameterHandler.handleParameters(ParameterHandler.java:70)
-at org.testng.internal.invokers.ParameterHandler.createParameters(ParameterHandler.java:49)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:904)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:193)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:808)
-at org.testng.TestRunner.run(TestRunner.java:603)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:429)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:423)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:383)
-at org.testng.SuiteRunner.run(SuiteRunner.java:326)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1249)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
-at org.testng.TestNG.runSuites(TestNG.java:1092)
-at org.testng.TestNG.run(TestNG.java:1060)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: java.lang.NullPointerException: Cannot invoke "Object.toString()" because the return value of "org.apache.poi.ss.usermodel.Row.getCell(int)" is null
-at com.demotour.qa.util.TestUtil.getTestData(TestUtil.java:45)
-at com.demotour.qa.testcases.HomepageTest.fetchData(HomepageTest.java:45)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:49)
-... 25 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.RuntimeException -->
+    <test started-at="2022-02-09T13:11:36 IST" name="Default test" finished-at="2022-02-09T13:11:59 IST" duration-ms="23164">
+      <class name="com.demotour.qa.testcases.LoginPageTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.demotour.qa.testcases.LoginPageTest@4c371370]" started-at="2022-02-09T13:11:36 IST" name="setup" finished-at="2022-02-09T13:11:41 IST" duration-ms="5054" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- checkValues -->
-      </class> <!-- com.demotour.qa.testcases.HomepageTest -->
+        </test-method> <!-- setup -->
+        <test-method signature="loginpagelogoTest()[pri:0, instance:com.demotour.qa.testcases.LoginPageTest@4c371370]" started-at="2022-02-09T13:11:41 IST" name="loginpagelogoTest" finished-at="2022-02-09T13:11:41 IST" duration-ms="86" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginpagelogoTest -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.demotour.qa.testcases.LoginPageTest@4c371370]" started-at="2022-02-09T13:11:41 IST" name="teardown" finished-at="2022-02-09T13:11:41 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.demotour.qa.testcases.LoginPageTest@4c371370]" started-at="2022-02-09T13:11:41 IST" name="setup" finished-at="2022-02-09T13:11:45 IST" duration-ms="4189" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="loginpagetitleTest()[pri:0, instance:com.demotour.qa.testcases.LoginPageTest@4c371370]" started-at="2022-02-09T13:11:45 IST" name="loginpagetitleTest" finished-at="2022-02-09T13:11:45 IST" duration-ms="8" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginpagetitleTest -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.demotour.qa.testcases.LoginPageTest@4c371370]" started-at="2022-02-09T13:11:45 IST" name="teardown" finished-at="2022-02-09T13:11:45 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.demotour.qa.testcases.LoginPageTest@4c371370]" started-at="2022-02-09T13:11:45 IST" name="setup" finished-at="2022-02-09T13:11:51 IST" duration-ms="6013" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="nologintest()[pri:0, instance:com.demotour.qa.testcases.LoginPageTest@4c371370]" started-at="2022-02-09T13:11:51 IST" name="nologintest" finished-at="2022-02-09T13:11:51 IST" duration-ms="53" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nologintest -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.demotour.qa.testcases.LoginPageTest@4c371370]" started-at="2022-02-09T13:11:51 IST" name="teardown" finished-at="2022-02-09T13:11:51 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.demotour.qa.testcases.LoginPageTest@4c371370]" started-at="2022-02-09T13:11:51 IST" name="setup" finished-at="2022-02-09T13:11:56 IST" duration-ms="4340" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="loginpagetest()[pri:1, instance:com.demotour.qa.testcases.LoginPageTest@4c371370]" started-at="2022-02-09T13:11:56 IST" name="loginpagetest" finished-at="2022-02-09T13:11:59 IST" duration-ms="3380" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginpagetest -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.demotour.qa.testcases.LoginPageTest@4c371370]" started-at="2022-02-09T13:11:59 IST" name="teardown" finished-at="2022-02-09T13:11:59 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- com.demotour.qa.testcases.LoginPageTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
